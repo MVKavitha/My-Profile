@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M V Kavitha — Salesforce Product Owner &amp; Business Analyst</title>
+<meta name="description" content="M V Kavitha — Salesforce Product Owner & Business Analyst. CRM Transformation, 4x Salesforce Certified, Agentforce Specialist. Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Eye-Catching Professional Palette (Modern Tech Blues & Clean Slates) */
+    --paper: #F8FAFC; 
+    --paper-2: #FFFFFF;
+    --ink: #0F172A;
+    --ink-soft: #475569;
+    --trail: #2563EB; /* Vibrant Royal Blue */
+    --trail-deep: #1E40AF;
+    --badge: #F59E0B; /* Amber/Gold accent */
+    --badge-soft: #FEF3C7;
+    --ridge: #E2E8F0;
+    --card: #FFFFFF;
+    --forest: #0F172A; /* Deep Slate for contrast sections */
+    --forest-2: #1E293B;
+    --max: 1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Abstract Background Illustration */
+  .bg-illustration {
+    position: absolute; top: -100px; right: -150px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, rgba(37,99,235,0) 70%);
+    z-index: -1;
+    border-radius: 50%;
+  }
+
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    color:var(--trail);
+    font-weight:500;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  section{padding:88px 0;}
+  @media (max-width:720px){ section{padding:60px 0;} }
+
+  :focus-visible{
+    outline:2px solid var(--badge);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(248,250,252,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--ridge);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    display:flex; align-items:center; gap:10px; text-decoration:none;
+  }
+  .brand-mark{
+    width:30px; height:30px; border-radius:50%;
+    background:var(--trail); color:var(--paper-2);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:0.7rem; font-weight:500;
+    border:2px solid var(--badge);
+    box-shadow: 0 4px 10px rgba(37,99,235,0.3);
+  }
+  nav.links{display:flex; gap:22px; flex-wrap:wrap;}
+  nav.links a{
+    font-size:0.88rem; text-decoration:none; color:var(--ink-soft);
+    font-weight:500; transition: color 0.2s ease;
+  }
+  nav.links a:hover{color:var(--trail);}
+  @media (max-width:640px){ nav.links{display:none;} }
+
+  /* HERO */
+  .hero{padding:72px 0 48px; position: relative;}
+  .hero-grid{
+    display:grid; grid-template-columns:1.25fr 0.9fr; gap:56px; align-items:center;
+  }
+  @media (max-width:840px){ .hero-grid{grid-template-columns:1fr;} }
+
+  .hero h1{font-size:clamp(2.1rem, 4.4vw, 3.1rem); line-height:1.08;}
+  .hero .role{
+    margin-top:14px; font-size:1.05rem; color:var(--trail-deep); font-weight:600;
+  }
+  .hero p.summary{
+    margin-top:20px; max-width:56ch; color:var(--ink-soft); font-size:1.02rem;
+  }
+  .venture-note{
+    margin-top:18px; display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--badge);
+    border:1px dashed var(--badge-soft); padding:7px 12px; border-radius:20px;
+    background:rgba(245,158,11,0.06);
+  }
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;}
+  .btn{
+    font-family:'Public Sans', sans-serif; font-weight:600; font-size:0.9rem;
+    padding:12px 20px; border-radius:8px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px; border:1px solid transparent;
+    transition:transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+  .btn-primary{background:var(--trail); color:var(--paper-2); box-shadow: 0 4px 12px rgba(37,99,235,0.2);}
+  .btn-primary:hover{background:var(--trail-deep);}
+  .btn-ghost{background:var(--paper-2); border-color:var(--ridge); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--trail); color:var(--trail);}
+
+  /* HERO BADGE PANEL & GRAPHICS */
+  .badge-panel{
+    background:var(--card); border:1px solid var(--ridge); border-radius:18px;
+    padding:32px 26px; position:relative;
+    box-shadow: 0 20px 40px -10px rgba(15,23,42,0.05);
+    overflow: hidden;
+  }
+  .badge-panel::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+    background: linear-gradient(90deg, var(--trail), var(--badge));
+  }
+  .avatar-ring{
+    width:104px; height:104px; border-radius:50%; margin:0 auto 18px;
+    display:block; object-fit:cover;
+    border:3px solid var(--paper-2);
+    box-shadow:0 0 0 4px var(--badge), 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .badge-panel .rank{
+    text-align:center; font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+    color:var(--trail); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:26px;
+    display: flex; justify-content: center; align-items: center; gap: 6px;
+  }
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  
+  /* Diagrammatic Stats */
+  .stat{
+    background:var(--paper); border:1px solid var(--ridge); border-radius:12px;
+    padding:16px 12px; text-align:center; position: relative;
+    overflow: hidden;
+  }
+  .stat .num{
+    font-family:'Fraunces', serif; font-size:1.5rem; font-weight:600; color:var(--trail-deep);
+  }
+  .stat .label{
+    font-size:0.72rem; color:var(--ink-soft); margin-top:4px; line-height:1.3;
+  }
+  /* Mini visual diagrams for stats */
+  .stat-diagram-bar {
+    width: 80%; height: 4px; background: var(--ridge); margin: 8px auto 0; border-radius: 2px;
+  }
+  .stat-diagram-fill {
+    height: 100%; background: var(--trail); border-radius: 2px;
+  }
+  .stat-diagram-circle {
+    position: absolute; top: -15px; right: -15px; width: 50px; height: 50px;
+    border-radius: 50%; border: 4px solid var(--badge-soft); opacity: 0.3;
+  }
+
+  /* SECTION HEADS */
+  .section-head{margin-bottom:44px; max-width:60ch;}
+  .section-head h2{font-size:clamp(1.6rem, 3vw, 2.1rem); display: flex; align-items: center; gap: 12px;}
+  .section-head p{color:var(--ink-soft); margin-top:10px; font-size:0.98rem;}
+  .header-icon { width: 32px; height: 32px; color: var(--badge); }
+
+  /* TRAIL / EXPERIENCE */
+  .trail{position:relative; padding-left:38px;}
+  .trail::before{
+    content:''; position:absolute; left:9px; top:6px; bottom:6px; width:2px;
+    background-image:linear-gradient(to bottom, var(--trail) 0 6px, transparent 6px 12px);
+    background-size:2px 12px; background-repeat:repeat-y;
+  }
+  .waypoint{position:relative; margin-bottom:40px;}
+  .waypoint:last-child{margin-bottom:0;}
+  .waypoint::before{
+    content:''; position:absolute; left:-38px; top:4px; width:20px; height:20px;
+    border-radius:50%; background:var(--paper-2); border:3px solid var(--badge);
+    box-shadow: 0 0 0 4px rgba(245,158,11,0.1);
+  }
+  .waypoint.current::before{ background:var(--badge); border-color:var(--paper-2); }
+  .wp-card{
+    background:var(--card); border:1px solid var(--ridge); border-radius:14px;
+    padding:26px 28px; box-shadow: 0 4px 12px rgba(15,23,42,0.02);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .wp-card:hover { transform: translateX(4px); border-color: var(--trail); }
+  .wp-top{
+    display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px;
+    margin-bottom:6px;
+  }
+  .wp-role{font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; color: var(--ink);}
+  .wp-dates{
+    font-family:'IBM Plex Mono', monospace; font-size:0.76rem; color:var(--paper-2);
+    background: var(--trail); padding: 4px 10px; border-radius: 12px;
+    white-space:nowrap; font-weight: 500;
+  }
+  .wp-org{color:var(--ink-soft); font-size:0.92rem; font-weight:600; margin-bottom:12px; display: flex; align-items: center; gap: 6px;}
+  .wp-card ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:0.92rem;}
+  .wp-card li{margin-bottom:8px;}
+  .wp-card li:last-child{margin-bottom:0;}
+
+  /* SKILLS WITH VISUAL DIAGRAMS */
+  .skill-groups{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px;}
+  @media (max-width:640px){ .skill-groups{grid-template-columns:1fr;} }
+  .skill-group {
+    background: var(--card); border: 1px solid var(--ridge); border-radius: 14px; padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+  .skill-group h3{
+    font-size:0.95rem; font-family:'Public Sans', sans-serif; font-weight:700; 
+    color:var(--trail-deep); margin-bottom:16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .skill-group h3 svg { width: 20px; height: 20px; color: var(--badge); }
+  .chip-row{display:flex; flex-direction: column; gap:12px;}
+  .skill-bar-container { display: flex; flex-direction: column; gap: 4px; }
+  .skill-label { font-size: 0.85rem; font-weight: 500; color: var(--ink); display: flex; justify-content: space-between;}
+  .skill-track { width: 100%; height: 6px; background: var(--paper); border-radius: 3px; overflow: hidden; }
+  .skill-fill { height: 100%; background: linear-gradient(90deg, var(--trail), var(--badge)); border-radius: 3px; }
+
+  /* CERTIFICATIONS */
+  .badge-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:18px;
+  }
+  .cert-card{
+    background:var(--card); border:1px solid var(--ridge); border-radius:14px;
+    padding:20px; display:flex; gap:16px; align-items:center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cert-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(37,99,235,0.08); border-color: var(--trail); }
+  .cert-mark{
+    flex:none; width:48px; height:48px; border-radius:12px;
+    background:var(--forest); border:2px solid var(--badge);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--badge-soft); font-family:'IBM Plex Mono', monospace; font-size:0.9rem; font-weight: bold;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  }
+  .cert-card h3{font-size:0.98rem; font-family:'Public Sans',sans-serif; font-weight:700;}
+  .cert-card p{margin:4px 0 0; font-size:0.82rem; color:var(--ink-soft);}
+  .cert-card.ranger{border-color:var(--badge); background:linear-gradient(135deg, var(--card), var(--badge-soft) 300%);}
+  .cert-card.ranger .cert-mark { background: var(--badge); color: var(--forest); border-color: var(--forest); }
+
+  /* LANGUAGES + EDUCATION */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  @media (max-width:720px){ .two-col{grid-template-columns:1fr;} }
+  .lang-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .lang-chip{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight: 500;
+    background:var(--card); border:1px solid var(--ridge); border-radius:8px;
+    padding:12px 16px; display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  }
+  .edu-card{
+    background:var(--card); border:1px solid var(--ridge); border-radius:14px; padding:24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02); border-left: 4px solid var(--trail);
+  }
+  .edu-card h3{font-size:1.05rem;}
+  .edu-card .meta{font-size:0.85rem; color:var(--ink-soft); margin-top:8px; display: flex; align-items: center; gap: 6px;}
+
+  /* CLOSING / CONTACT */
+  .closing{
+    background:var(--forest); color:var(--paper-2); position: relative; overflow: hidden;
+  }
+  /* Footer Illustration Graphics */
+  .closing::after {
+    content: ''; position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px;
+    border: 40px solid rgba(255,255,255,0.03); border-radius: 50%;
+  }
+  .closing::before {
+    content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, rgba(245,158,11,0) 70%);
+  }
+  
+  .closing .eyebrow{color:var(--badge-soft);}
+  .closing h2{color:var(--paper-2); font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-top: 12px;}
+  .closing p{color:#94A3B8; max-width:62ch; margin-top: 16px; font-size: 1.05rem;}
+  .contact-grid{
+    margin-top:48px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:16px; position: relative; z-index: 2;
+  }
+  .contact-card{
+    background:var(--forest-2); border:1px solid #334155; border-radius:14px;
+    padding:24px; text-decoration:none; color:var(--paper-2);
+    display:block; transition:all 0.2s ease;
+  }
+  .contact-card:hover{border-color:var(--badge); background: #29384D; transform: translateY(-3px);}
+  .contact-card .eyebrow{display:block; margin-bottom:12px; color: #94A3B8;}
+  .contact-card strong{font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; color: var(--paper-2);}
+
+  footer{
+    background:var(--forest); color:#64748B; text-align:center; padding:26px 0;
+    font-size:0.85rem; border-top:1px solid #1E293B;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-illustration"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">MVK</span>
+      M V Kavitha
+    </a>
+    <nav class="links">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Bengaluru · Greater Bengaluru Area
+        </p>
+        <h1>M V Kavitha</h1>
+        <p class="role">Salesforce Product Owner &amp; Business Analyst — CRM Transformation, 4x Certified, Agentforce Specialist</p>
+        <p class="summary">
+          9+ years of professional experience, 4+ years deep in the Salesforce ecosystem — driving CRM strategy,
+          platform optimization, and business transformation. I currently own the roadmap for a Salesforce product
+          supporting 1,500+ users, lead a support team, and translate business needs into scalable, well-governed
+          solutions.
+        </p>
+        <div class="venture-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          Open to Salesforce leadership roles — and always exploring new ventures beyond CRM
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Let's talk</a>
+          <a class="btn btn-ghost" href="Kavitha-Rajatammana-Profile.pdf" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
+            Download resume
+          </a>
+        </div>
+      </div>
+
+      <div class="badge-panel">
+        <img class="avatar-ring" src="profile.jpg" alt="M V Kavitha">
+        <p class="rank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Triple Star Ranger · Trailblazer
+        </p>
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-diagram-circle"></div>
+            <div class="num">1,500+</div><div class="label">Salesforce users managed</div>
+            <div class="stat-diagram-bar"><div class="stat-diagram-fill" style="width: 100%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-diagram-circle"></div>
+            <div class="num">4x</div><div class="label">Salesforce Certified</div>
+            <div class="stat-diagram-bar"><div class="stat-diagram-fill" style="width: 80%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-diagram-circle"></div>
+            <div class="num">99.5%</div><div class="label">Data accuracy achieved</div>
+            <div class="stat-diagram-bar"><div class="stat-diagram-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-diagram-circle"></div>
+            <div class="num">35%</div><div class="label">Fewer support tickets</div>
+            <div class="stat-diagram-bar"><div class="stat-diagram-fill" style="width: 65%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / TRAIL -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Trail So Far</p>
+        <h2>
+          <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Professional Experience
+        </h2>
+        <p>Nine years across healthcare operations, a deliberate career sabbatical, and a steady climb through the Salesforce ecosystem — from administrator to product owner.</p>
+      </div>
+
+      <div class="trail">
+        <div class="waypoint current">
+          <div class="wp-card">
+            <div class="wp-top">
+              <span class="wp-role">Salesforce Product Owner &amp; Support Team Lead</span>
+              <span class="wp-dates">Apr 2025 — Present</span>
+            </div>
+            <div class="wp-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              INTO University Partnerships · Bangalore Urban
+            </div>
+            <ul>
+              <li>Lead a team of 7–10 Salesforce support professionals across 300+ monthly cases while consistently hitting SLA targets.</li>
+              <li>Own the product roadmap and a backlog of 50+ user stories, partnering with 15+ business stakeholders.</li>
+              <li>Facilitate stakeholder workshops, backlog grooming, sprint planning, and release prioritization.</li>
+              <li>Built automation with Flows and Validation Rules, cutting manual effort by 30%.</li>
+              <li>Lifted data accuracy to 99.5% through improved governance processes.</li>
+              <li>Led change management and training that cut onboarding time 25% and support tickets 35%.</li>
+              <li>Manage user lifecycle, security model, and permissions for 1,500+ users; evaluating Agentforce and AI-driven automation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="waypoint">
+          <div class="wp-card">
+            <div class="wp-top">
+              <span class="wp-role">Salesforce Administrator</span>
+              <span class="wp-dates">Sep 2023 — Apr 2025</span>
+            </div>
+            <div class="wp-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              INTO University Partnerships · Bangalore Urban
+            </div>
+            <ul>
+              <li>Administered a Sales Cloud environment supporting 500+ users, maintaining stability, security, and data quality.</li>
+              <li>Ran requirements workshops, translating business needs into specs, user stories, and solution designs.</li>
+              <li>Delivered 12+ enhancements and process improvements with business and technical teams.</li>
+              <li>Automated processes with Flow Builder and Workflow Rules, reducing processing time 30%.</li>
+              <li>Built executive dashboards and reports for real-time visibility into sales performance and KPIs.</li>
+              <li>Managed release cycles and change-set migrations with zero business disruption.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="waypoint">
+          <div class="wp-card">
+            <div class="wp-top">
+              <span class="wp-role">Salesforce Administrator</span>
+              <span class="wp-dates">Mar 2021 — Sep 2023</span>
+            </div>
+            <div class="wp-org">Zensar Technologies</div>
+            <ul>
+              <li>Administered Sales Cloud for 500+ users across multiple business units.</li>
+              <li>Configured roles, profiles, permission sets, page layouts, record types, and object-level security.</li>
+              <li>Managed release cycles including sandbox testing and change-set deployments with zero downtime.</li>
+              <li>Automated business processes with Flows and Workflow Rules, cutting processing time 30%.</li>
+              <li>Delivered custom reports and dashboards supporting leadership decisions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="waypoint">
+          <div class="wp-card">
+            <div class="wp-top">
+              <span class="wp-role">Career Sabbatical &amp; Professional Development</span>
+              <span class="wp-dates">Jan 2017 — Mar 2021</span>
+            </div>
+            <div class="wp-org">Self Employed</div>
+            <ul>
+              <li>Managed personal and family commitments alongside long-term career planning.</li>
+              <li>Transitioned into the Salesforce ecosystem through structured learning and certification preparation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="waypoint">
+          <div class="wp-card">
+            <div class="wp-top">
+              <span class="wp-role">Service Line Manager</span>
+              <span class="wp-dates">2015 — 2017</span>
+            </div>
+            <div class="wp-org">Apollo Cradle · Fortis · Cytecare</div>
+            <ul>
+              <li>Managed end-to-end operational workflows across patient scheduling, billing, and insurance in a high-volume healthcare setting.</li>
+              <li>Led operational reporting, compliance tracking, and cross-functional coordination between clinical and administrative teams.</li>
+              <li>Identified and implemented process improvements that lifted customer experience and operational effectiveness.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Core Strengths</p>
+        <h2>
+          <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          Skills
+        </h2>
+      </div>
+      
+      <!-- Diagrammatic Skills Display -->
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            Salesforce Platform
+          </h3>
+          <div class="chip-row">
+            <div class="skill-bar-container"><div class="skill-label"><span>Administration</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Flows &amp; Automation</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Platform App Building</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Agentforce &amp; AI</span><span>75%</span></div><div class="skill-track"><div class="skill-fill" style="width: 75%;"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            Product &amp; Business Analysis
+          </h3>
+          <div class="chip-row">
+            <div class="skill-bar-container"><div class="skill-label"><span>Product Ownership</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Requirements Gathering</span><span>100%</span></div><div class="skill-track"><div class="skill-fill" style="width: 100%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Agile / Scrum Delivery</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Change Management</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+            Reporting &amp; Data
+          </h3>
+          <div class="chip-row">
+            <div class="skill-bar-container"><div class="skill-label"><span>Salesforce Reporting</span><span>100%</span></div><div class="skill-track"><div class="skill-fill" style="width: 100%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Executive Dashboards</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Data Governance</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Leadership &amp; Enablement
+          </h3>
+          <div class="chip-row">
+            <div class="skill-bar-container"><div class="skill-label"><span>Stakeholder Management</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>Team Leadership</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div></div>
+            <div class="skill-bar-container"><div class="skill-label"><span>CRM Governance &amp; Strategy</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Badges Earned Along the Way</p>
+        <h2>
+          <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-3 3-3-3V5h6v10z"></path><path d="M15 8h4v13l-4-2.5L11 21v-3"></path></svg>
+          Certifications
+        </h2>
+      </div>
+      <div class="badge-grid">
+        <div class="cert-card">
+          <div class="cert-mark">BA</div>
+          <div><h3>Salesforce Certified Business Analyst</h3><p>Salesforce</p></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-mark">SCA</div>
+          <div><h3>Salesforce Certified Administrator</h3><p>Salesforce</p></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-mark">PAB</div>
+          <div><h3>Salesforce Certified Platform App Builder</h3><p>Salesforce</p></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-mark">AF</div>
+          <div><h3>Salesforce Certified Agentforce Specialist</h3><p>Salesforce</p></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-mark">GPM</div>
+          <div><h3>Google Project Management Certificate</h3><p>Google</p></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-mark">JIRA</div>
+          <div><h3>Atlassian Jira Certification</h3><p>Atlassian</p></div>
+        </div>
+        <div class="cert-card ranger">
+          <div class="cert-mark">★★★</div>
+          <div><h3>Triple Star Ranger</h3><p>Salesforce Trailblazer rank</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + LANGUAGES -->
+  <section id="education">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head" style="margin-bottom:24px;">
+          <p class="eyebrow">Foundation</p>
+          <h2>Education</h2>
+        </div>
+        <div class="edu-card">
+          <h3>Bachelor of Social Work</h3>
+          <div class="meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Mangalore University · Jun 2011 — Apr 2014
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:24px;">
+          <p class="eyebrow">Fluent In</p>
+          <h2>Languages</h2>
+        </div>
+        <div class="lang-row">
+          <span class="lang-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            English
+          </span>
+          <span class="lang-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Hindi
+          </span>
+          <span class="lang-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Kannada
+          </span>
+          <span class="lang-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Telugu
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING / CONTACT -->
+  <section class="closing" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+        Next Waypoint
+      </p>
+      <h2>Let's build the next CRM transformation together.</h2>
+      <p>Open to Salesforce leadership, product ownership, and business analyst roles — and genuinely curious about new ventures beyond CRM. Based in Bengaluru; happy to connect for a conversation.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:kavitha.rajatammana@yahoo.com">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email
+          </span>
+          <strong>Send a message</strong>
+        </a>
+        <a class="contact-card" href="tel:+919538916181">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Phone
+          </span>
+          <strong>Call directly</strong>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/m-v-kavitha-330459265/" target="_blank" rel="noopener">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </span>
+          <strong>View profile</strong>
+        </a>
+        <a class="contact-card" href="https://www.trailblazer.me/id/kavitharajatammana" target="_blank" rel="noopener">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            Trailblazer
+          </span>
+          <strong>View badges</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  M V Kavitha · Salesforce Product Owner &amp; Business Analyst · Bengaluru, India
+</footer>
+
+</body>
+</html>
